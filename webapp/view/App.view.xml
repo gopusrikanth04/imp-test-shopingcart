@@ -1,0 +1,19 @@
+<mvc:View controllerName="sap.ui.demo.cart.controller.App"
+    displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:f="sap.f"
+    xmlns="sap.m">
+	<App
+		id="app"
+		class="sapUiDemoCart">
+		<f:FlexibleColumnLayout
+			id="layout"
+			busy="{appView>/busy}"
+			busyIndicatorDelay="{appView>/delay}"
+			layout="{appView>/layout}"
+			backgroundDesign="Translucent"
+			class="sapUiDemoCart"
+			stateChange=".onStateChange">
+		</f:FlexibleColumnLayout>
+	</App>
+</mvc:View>
