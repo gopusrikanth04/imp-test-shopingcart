@@ -1,0 +1,20 @@
+_schema-version: "3.2"
+ID: sapuidemocart-dev
+
+extends: sapuidemocart
+
+resources:
+
+  - name: sapuidemocart-destination-service
+    parameters:
+      service-name: sapuidemocart-destination-service-dev
+
+  - name: sapuidemocart-uaa
+    parameters:
+      service-name: sapuidemocart-xsuaa-service-dev
+      config:
+        xsappname: sapuidemocart-dev
+
+  - name: sapuidemocart-repo-host
+    parameters:
+      service-name: sapuidemocart-html5-service-dev
