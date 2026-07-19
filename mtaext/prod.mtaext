@@ -18,3 +18,20 @@ resources:
   - name: sapuidemocart-repo-host
     parameters:
       service-name: sapuidemocart-html5-service-prod
+
+modules:
+  - name: sapuidemocart-destination-content
+    parameters:
+      content:
+        instance:
+          destinations:
+            - Name: sapuidemocart_html_repo_host
+              ServiceInstanceName: sapuidemocart-html5-service-prod
+              ServiceKeyName: sapuidemocart-repo-host-key
+              sap.cloud.service: sapuidemocart
+
+            - Authentication: OAuth2UserTokenExchange
+              Name: sapuidemocart_uaa
+              ServiceInstanceName: sapuidemocart-xsuaa-service-prod
+              ServiceKeyName: sapuidemocart-uaa-key
+              sap.cloud.service: sapuidemocart
